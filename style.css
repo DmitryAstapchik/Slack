@@ -68,7 +68,8 @@
 
 #grid {
     display: grid;
-    grid-template: 45px 70px 1fr / 280px 5fr 3fr;
+    grid-template-rows: 45px 70px 1fr;
+    grid-template-columns: 280px minmax(490px, 5fr) minmax(350px, 3fr);
     height: 100%;
 }
 
@@ -371,6 +372,7 @@
 
 .hidden {
     visibility: hidden;
+    display: none;
 }
 
 .highlighted, #show-less:hover, .icon-white, .direct-messages-menu-item .hidden:hover {
@@ -405,11 +407,6 @@
     .message > div > span {
         color: gray;
         font-size: 12px;
-    }
-
-    .message pre {
-        font-family: inherit;
-        margin: 0;
     }
 
 .message-image {
@@ -458,7 +455,7 @@
     display: flex;
     height: 35px;
     padding-left: 1px;
-    width: 500px;
+    width: 90%;
 }
 
     .replies b {
@@ -522,6 +519,7 @@
 
     .reply-message:hover .actions, .reply-message:hover .actions-top, .direct-messages-menu-item:hover .hidden, .message:hover .actions, .replies:hover .hidden {
         visibility: visible;
+        display: initial;
     }
 
 .send-button {
