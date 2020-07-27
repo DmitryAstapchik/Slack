@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Slack Dmitry Astapchik</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="images/slack icon.png">
+    <script src="https://kit.fontawesome.com/1c42095100.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="grid">
+        <div id="title-bar">
+            <div id="hamburger-menu" class="title-bar-item button">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div>
+                <div id="left-arrow" class="title-bar-item title-bar-item-small">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+                <div id="right-arrow" class="title-bar-item title-bar-item-small">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div id="history" class="title-bar-item title-bar-item-small">
+                    <i class="far fa-clock"></i>
+                </div>
+                <div id="search" class="title-bar-item title-bar-item-small">
+                    <span>Search Ais</span>
+                    <div id="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="help" class="title-bar-item title-bar-item-small">
+                    <i class="far fa-question-circle"></i>
+                </div>
+                <div id="minimize" class="title-bar-item button">
+                    <i class="far fa-window-minimize"></i>
+                </div>
+                <div id="maximize" class="title-bar-item button">
+                    <i class="far fa-window-maximize"></i>
+                </div>
+                <div id="close" class="title-bar-item button">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+        </div>
+        <div id="user-menu">
+            <div id="workspace-name">
+                <b>Ais</b>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div id="user-name">
+                <i class="fas fa-circle"></i>
+                <span>Dmitry Astapchik</span>
+            </div>
+            <div id="new-message-icon">
+                <div id="circle-icon">
+                    <i class="far fa-edit"></i>
+                </div>
+            </div>
+        </div>
+        <div id="channel-bar">
+            <div id="channel-info">
+                <i class="fas fa-lock black-icon"></i> <b>task2</b> <div id="star-icon"><i class="far fa-star icon-gray"></i></div><br />
+                <span class="small-gray-text">
+                    <span class="blue-hover"><i class="far fa-user icon-gray"></i> 284</span> |
+                    <span class="blue-hover"><i class="fas fa-thumbtack icon-gray"></i> 4</span> |
+                    <span class="blue-hover">Add a topic</span>
+                </span>
+            </div>
+            <div id="info-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+        </div>
+        <div id="channel-additional-bar">
+            <div>
+                <b>Thread</b><br />
+                <span class="hover-underline small-gray-text"><i class="fas fa-lock icon-gray"></i> task2</span>
+            </div>
+            <div id="times-icon">
+                <i class="fas fa-times icon-gray"></i>
+            </div>
+        </div>
+        <div id="sidebar">
+            <div id="menu">
+                <div class="menu-item">
+                    <i class="far fa-comment-dots menu-icon"></i>
+                    <b class="highlighted">Threads</b>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-at menu-icon"></i>
+                    <span>Mentions & reactions</span>
+                </div>
+                <div class="menu-item">
+                    <i class="far fa-copy menu-icon"></i>
+                    <span>Drafts</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-portrait menu-icon"></i>
+                    <b class="highlighted">People</b>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-braille menu-icon"></i>
+                    <span>Apps</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-layer-group menu-icon"></i>
+                    <span>Files</span>
+                </div>
+                <div id="show-less" class="menu-item">
+                    <i class="fas fa-arrow-up menu-icon"></i>
+                    <span>Show less</span>
+                </div>
+            </div>
+            <div id="channels">
+                <i class="fas fa-caret-down"></i>
+                &nbsp;Channels
+                <div class="plus-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="channel-name menu-item"># &nbsp;general</div>
+            <div class="channel-name menu-item"># &nbsp;questions</div>
+            <div class="channel-name menu-item"># &nbsp;random</div>
+            <div class="channel-name menu-item"># &nbsp;task1</div>
+            <div class="channel-name menu-item" id="task2-menu-item">
+                <i class="fas fa-lock"></i>
+                &nbsp;task2
+            </div>
+            <div id="direct-messages">
+                <i class="fas fa-caret-down"></i>
+                &nbsp;Direct messages
+                <div class="plus-icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <div class="menu-item direct-messages-menu-item">
+                <i class="fas fa-heart"></i>
+                Slackbot
+                <i class="fas fa-times hidden"></i>
+            </div>
+            <div class="menu-item direct-messages-menu-item">
+                <i id="circle" class="fas fa-circle"></i>
+                Dmitry Astapchik (you)
+                <i class="fas fa-times hidden"></i>
+            </div>
+        </div>
+        <div id="chat">
+            <div class="message">
+                <img src="images/artur.khmelyarskiy..jpg" class="message-image" />
+                <div>
+                    <b>artur.khmelyarskiy.</b>  <span>2:43 PM</span><br />
+                    <div>
+                        Hello to everyone. how long do you check task 2 and html/css?
+                    </div>
+                    <div class="replies">
+                        <img src="images/ilya.mokin.ais.jpg" />
+                        <img src="images/artur.khmelyarskiy..jpg" />
+                        <b>2 replies</b>
+                        <span>Last reply 4 days ago</span>
+                        <span class="hidden">View thread</span>
+                        <i class="fas fa-angle-right icon-gray hidden"></i>
+                    </div>
+                    <div class="actions hidden">
+                        <div class="options-button">
+                            <i class="far fa-laugh icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-comment-dots icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-share icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-bookmark icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-ellipsis-v icon-gray"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="today">
+                <div>
+                    <b>Today</b> <i class="fas fa-angle-down icon-gray"></i>
+                </div>
+            </div>
+            <hr />
+            <div class="message">
+                <img src="images/Мельников Вадим.jpg" class="message-image" />
+                <div>
+                    <b>Мельников Вадим</b>  <span>10:01 AM</span><br />
+                    <div>
+                        was added to task2 by <span class="blue-underline-hover">ilya.mokin.ais</span>.
+                    </div>
+                    <div class="actions hidden">
+                        <div class="options-button">
+                            <i class="far fa-laugh icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-share icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-bookmark icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-ellipsis-v icon-gray"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <img src="images/Amina Z.jpg" class="message-image" />
+                <div>
+                    <b>Amina Z</b>  <span>11:08 AM</span><br />
+                    <div>
+                        Hello, i've faced two problems.<br />
+                        1. date-tasks, leap year. Standart solution function isLeapYear(date)
+                        {      return (date.getFullYear%4);} returns that 2000 year is a laep year,
+                        but the program expect the false answer:  AssertionError [ERR_ASSERTION]:
+                        Tue Feb 01 2000 00:00:00 is a leap year<br />
+                        + expected - actual<br />
+                        -false<br />
+                        +true<br />
+                        Why it expects the wrong answer? <span class="edited">(edited)</span>
+                    </div>
+                    <div class="replies">
+                        <img src="images/dananaprey.jpg" />
+                        <b>1 reply</b>
+                        <span>Today at 11:09 AM</span>
+                        <span class="hidden">View thread</span>
+                        <i class="fas fa-angle-right icon-gray hidden"></i>
+                    </div>
+                    <div class="actions hidden">
+                        <div class="options-button">
+                            <i class="far fa-laugh icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-comment-dots icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-share icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-bookmark icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-ellipsis-v icon-gray"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <img src="images/Amina Z.jpg" class="message-image" />
+                <div>
+                    <b>Amina Z</b>  <span>11:08 AM</span><br />
+                    <pre>
+The second problem is in the number tasks:
+getAverage should return an average of two numbers:
+      AssertionError [ERR_ASSERTION]: 1.7976931348623157e+308 == Infinity
+      + expected - actual
+      -1.7976931348623157e+308
+      +Infinity
+      at Context.<anonymous> (test\02-numbers-tests.js:24:16)
+      at Context.<anonymous> (extensions\it-optional.js:17:30)
+      at processImmediate (internal/timers.js:458:21)
+My soluthion is very simple: return (value1+value2)/2; Maybe it is not a code problem? <span class="edited">(edited)</span>
+</pre>
+                    <div class="replies">
+                        <img src="images/dananaprey.jpg" />
+                        <img src="images/Amina Z.jpg" />
+                        <img src="images/ilya.mokin.ais.jpg" />
+                        <b>3 replies</b>
+                        <span>Last reply today at 12:03 PM</span>
+                        <span class="hidden">View thread</span>
+                        <i class="fas fa-angle-right icon-gray hidden"></i>
+                    </div>
+                    <div class="actions hidden">
+                        <div class="options-button">
+                            <i class="far fa-laugh icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-comment-dots icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-share icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-bookmark icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-ellipsis-v icon-gray"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="message-form">
+                <textarea placeholder="Message task2"></textarea>
+                <div id="message-options">
+                    <div>
+                        <div class="options-button">
+                            <i class="fas fa-bolt icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-italic icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-code icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-link icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-list-ol icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-list-ul icon-gray"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="options-button">
+                            <i class="fas fa-font icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-at icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-smile icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-paperclip icon-gray"></i>
+                        </div>
+                        <div class="options-button send-button">
+                            <i class="fas fa-chevron-right icon-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="additional-bar">
+            <div class="reply-message">
+                <img src="images/artur.khmelyarskiy..jpg" class="message-image" />
+                <div>
+                    <b>artur.khmelyarskiy.</b>  <span>Yesterday ay 2:43 PM</span><br />
+                    Hello to everyone. how long do you check task 2 and html/css?
+                </div>
+                <div class="actions-top hidden">
+                    <div class="options-button">
+                        <i class="far fa-laugh icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="far fa-bookmark icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="fas fa-ellipsis-v icon-gray"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="replies-number">
+                2 replies
+                <hr />
+            </div>
+            <div class="reply-message">
+                <img src="images/ilya.mokin.ais.jpg" class="message-image" />
+                <div>
+                    <b>ilya.mokin.ais</b>  <span>23 hours ago</span><br />
+                    we have a big list of the task in queue, up to a week I guess.<br />
+                    Hope it will be faster
+                </div>
+                <div class="actions hidden">
+                    <div class="options-button">
+                        <i class="far fa-laugh icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="far fa-bookmark icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="fas fa-ellipsis-v icon-gray"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="reply-message">
+                <img src="images/artur.khmelyarskiy..jpg" class="message-image" />
+                <div>
+                    <b>artur.khmelyarskiy.</b>  <span>22 hours ago</span><br />
+                    Thank you for the information.
+                </div>
+                <div class="actions hidden">
+                    <div class="options-button">
+                        <i class="far fa-laugh icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="far fa-bookmark icon-gray"></i>
+                    </div>
+                    <div class="options-button">
+                        <i class="fas fa-ellipsis-v icon-gray"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="reply-form">
+                <textarea placeholder="Reply..."></textarea>
+                <div id="reply-options">
+                    <div>
+                        <div class="options-button">
+                            <i class="fas fa-bolt icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-italic icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-code icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-ellipsis-h icon-gray"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="options-button">
+                            <i class="fas fa-font icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="far fa-smile icon-gray"></i>
+                        </div>
+                        <div class="options-button">
+                            <i class="fas fa-paperclip icon-gray"></i>
+                        </div>
+                        <div class="options-button send-button">
+                            <i class="fas fa-chevron-right icon-white"></i>
+                        </div>
+                    </div>
+                </div>
+                <label id="reply-form-checkbox">
+                    <input type="checkbox" />
+                    Also send to <i class="fas fa-lock icon-gray"></i> <b>task2</b> <i class="fas fa-question-circle icon-gray"></i>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
