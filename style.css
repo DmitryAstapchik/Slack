@@ -1,65 +1,68 @@
 ﻿#additional-bar hr {
-    background-color: lightgray;
-    border: 0;
-    height: 1px;
     width: 80%;
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
 }
 
 #channel-additional-bar {
-    align-items: center;
-    border-bottom: 1px solid lightgray;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    line-height: 130%;
     padding: 20px 10px 20px 20px;
+    border-bottom: 1px solid lightgray;
+    line-height: 130%;
 }
 
 #channel-bar {
-    align-items: center;
-    border-bottom: 1px solid lightgray;
-    border-right: 1px solid lightgray;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     line-height: 130%;
     word-spacing: 3px;
 }
 
 #channel-info {
-    cursor: pointer;
     margin: 20px 20px 20px 25px;
+    cursor: pointer;
 }
 
 #channels, #direct-messages {
-    cursor: pointer;
     margin: 20px;
+    cursor: pointer;
 }
 
 #chat {
-    border-right: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border-right: 1px solid lightgray;
 }
 
     #chat hr {
-        background-color: lightgray;
-        border: 0;
+        position: relative;
+        top: -25px;
         height: 1px;
-        margin: 20px 0;
+        margin: 0 0;
+        border: 0;
+        background-color: lightgray;
+        z-index: -1;
     }
 
 #circle {
-    bottom: 3px;
     position: relative;
+    bottom: 3px;
 }
 
 #circle-icon {
-    background-color: #FFF;
-    border-radius: 50%;
-    height: 30px;
-    padding-left: 12px;
-    padding-top: 10px;
     width: 30px;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 12px;
+    border-radius: 50%;
+    background-color: #FFF;
 }
 
 #close:hover {
@@ -68,25 +71,25 @@
 
 #grid {
     display: grid;
-    grid-template-rows: 45px 70px 1fr;
     grid-template-columns: 280px minmax(490px, 5fr) minmax(350px, 3fr);
+    grid-template-rows: 45px 70px 1fr;
     height: 100%;
 }
 
 #help {
-    margin-right: 10px;
     margin-top: 10px;
-    padding-left: 5px;
+    margin-right: 10px;
     padding-top: 5px;
+    padding-left: 5px;
 }
 
 #info-icon {
-    border-radius: 5px;
     box-sizing: border-box;
+    width: 35px;
     height: 35px;
     margin-right: 10px;
     padding: 7px;
-    width: 35px;
+    border-radius: 5px;
 }
 
     #info-icon:hover {
@@ -95,17 +98,17 @@
     }
 
 #menu {
-    border-bottom: 1px solid #6d4475;
     height: 240px;
     padding-top: 10px;
+    border-bottom: 1px solid #6d4475;
 }
 
 #message-options {
-    background-color: #F8F8FF;
-    border-top: 1px solid lightgray;
     box-sizing: border-box;
     height: 49%;
     padding-top: 2px;
+    border-top: 1px solid lightgray;
+    background-color: #F8F8FF;
 }
 
     #message-options .options-button:first-of-type {
@@ -117,32 +120,32 @@
     }
 
 #new-message-icon {
-    align-items: center;
     display: flex;
     grid-row: 1/3;
+    align-items: center;
     justify-content: center;
 }
 
 #replies-number {
-    align-items: center;
-    color: lightgray;
     display: flex;
-    font-size: 14px;
+    align-items: center;
     padding: 5px 20px;
+    color: lightgray;
+    font-size: 14px;
 }
 
 #reply-form, #message-form {
-    border: 1px solid #000;
-    border-radius: 5px;
     height: 80px;
     margin: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 #reply-form-checkbox {
-    cursor: pointer;
     display: block;
-    font-size: 14px;
     margin-top: 15px;
+    font-size: 14px;
+    cursor: pointer;
 }
 
     #reply-form-checkbox input[type=checkbox] {
@@ -151,11 +154,11 @@
     }
 
 #reply-options {
-    background-color: #F8F8FF;
-    border-top: 1px solid lightgray;
     box-sizing: border-box;
     height: 49%;
     padding-top: 3px;
+    border-top: 1px solid lightgray;
+    background-color: #F8F8FF;
 }
 
     #reply-options div:first-child div:first-child {
@@ -176,24 +179,28 @@
     }
 
 #search {
-    background-color: var(--main-purple);
-    border: 1px solid #A9A9A9;
-    color: var(--light-purple);
-    font-size: 14px;
-    height: 20px;
-    padding-top: 0;
     position: relative;
     width: 500px;
+    height: 20px;
+    padding-top: 0;
+    border: 1px solid #A9A9A9;
+    background-color: var(--main-purple);
+    color: var(--light-purple);
+    font-size: 14px;
 }
 
 #search-icon {
-    float: right;
-    height: 20px;
     width: 20px;
+    height: 20px;
+    float: right;
 }
 
 #search:hover {
     border-color: #FFF;
+    color: #FFF;
+}
+
+#show-less:hover i {
     color: #FFF;
 }
 
@@ -204,12 +211,12 @@
 }
 
 #star-icon {
-    border-radius: 5px;
     display: inline-block;
-    height: 20px;
-    padding-left: 2px;
-    padding-top: 2px;
     width: 20px;
+    height: 20px;
+    padding-top: 2px;
+    padding-left: 2px;
+    border-radius: 5px;
 }
 
 #task2-menu-item {
@@ -218,14 +225,14 @@
 }
 
 #times-icon {
-    border-radius: 5px;
     box-sizing: border-box;
-    cursor: pointer;
-    float: right;
-    height: 35px;
-    padding-left: 12px;
-    padding-top: 10px;
     width: 35px;
+    height: 35px;
+    padding-top: 10px;
+    padding-left: 12px;
+    float: right;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
     #times-icon:hover, #star-icon:hover, .reply-message:hover, .message:hover {
@@ -233,39 +240,20 @@
     }
 
 #title-bar {
-    align-items: center;
-    background-color: var(--dark-purple);
     display: flex;
     grid-column: 1 / 4;
-    justify-content: space-between;
-}
-
-#today {
     align-items: center;
-    background-color: #FFF;
-    border: 1px solid lightgray;
-    border-radius: 25px;
-    box-sizing: border-box;
-    color: gray;
-    cursor: pointer;
-    display: flex;
-    font-size: 14px;
-    height: 30px;
-    justify-content: center;
-    left: calc(50% - 40px);
-    padding: 5px;
-    position: relative;
-    top: 35px;
-    width: 80px;
+    justify-content: space-between;
+    background-color: var(--dark-purple);
 }
 
 #user-menu {
-    background-color: var(--main-purple);
-    border-bottom: 1px solid #6d4475;
-    border-top: 1px solid #6d4475;
-    cursor: pointer;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
+    border-top: 1px solid #6d4475;
+    border-bottom: 1px solid #6d4475;
+    background-color: var(--main-purple);
+    cursor: pointer;
 }
 
     #user-menu:hover, .menu-item:hover {
@@ -273,27 +261,27 @@
     }
 
 #user-name {
-    color: #e2cfe6;
-    font-size: 14px;
     grid-row: 2/3;
     padding-left: 20px;
+    color: #e2cfe6;
+    font-size: 14px;
 }
 
 #workspace-name {
+    grid-row: 1/2;
+    padding-top: 10px;
+    padding-left: 20px;
     color: #FFF;
     font-size: 18px;
-    grid-row: 1/2;
-    padding-left: 20px;
-    padding-top: 10px;
 }
 
 .actions {
-    background-color: #FFF;
+    position: absolute;
+    top: -20px;
+    right: 2px;
     border: 1px solid gray;
     border-radius: 5px;
-    position: absolute;
-    right: 2px;
-    top: -20px;
+    background-color: #FFF;
 }
 
     .actions div:first-child, .actions div:nth-child(2), .actions-top div:first-child, .actions-top div:nth-child(2) {
@@ -301,12 +289,12 @@
     }
 
 .actions-top {
-    background-color: #FFF;
+    position: absolute;
+    top: 2px;
+    right: 2px;
     border: 1px solid gray;
     border-radius: 5px;
-    position: absolute;
-    right: 2px;
-    top: 2px;
+    background-color: #FFF;
 }
 
 .black-icon {
@@ -320,26 +308,48 @@
 
 .blue-underline-hover:hover {
     color: #4682B4;
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .button {
     box-sizing: border-box;
-    height: 45px;
-    padding-left: 15px;
-    padding-top: 13px;
     width: 45px;
+    height: 45px;
+    padding-top: 13px;
+    padding-left: 15px;
 }
 
 .channel-name {
     padding-left: 30px;
 }
 
+.day {
+    box-sizing: border-box;
+    box-sizing: border-box;
+    display: flex;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    background-color: #FFF;
+    color: gray;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .day b {
+        margin-right: 3px;
+    }
+
 .direct-messages-menu-item .fa-times {
-    float: right;
-    margin-right: 20px;
     margin-top: 3px;
+    margin-right: 20px;
+    float: right;
 }
 
 .edited {
@@ -371,8 +381,8 @@
 }
 
 .hidden {
-    visibility: hidden;
     display: none;
+    visibility: hidden;
 }
 
 .highlighted, #show-less:hover, .icon-white, .direct-messages-menu-item .hidden:hover {
@@ -380,8 +390,8 @@
 }
 
 .hover-underline:hover, .message > div > b:hover, .message > div > span:hover {
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .icon-gray {
@@ -393,15 +403,15 @@
 }
 
 .menu-item {
-    cursor: pointer;
     padding: 5px 5px 5px 30px;
+    cursor: pointer;
 }
 
 .message {
     display: flex;
-    line-height: 1.4;
-    padding: 5px 20px;
     position: relative;
+    padding: 5px 20px;
+    line-height: 1.4;
 }
 
     .message > div > span {
@@ -410,28 +420,23 @@
     }
 
 .message-image {
-    border-radius: 5px;
-    cursor: pointer;
+    width: 40px;
     height: 40px;
     margin-right: 10px;
-    width: 40px;
-}
-
-.message:first-of-type {
-    position: relative;
-    top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .options-button {
-    border-radius: 5px;
     box-sizing: border-box;
-    cursor: pointer;
     display: inline-block;
+    width: 30px;
     height: 30px;
     margin: 2px;
-    padding-left: 7px;
     padding-top: 5px;
-    width: 30px;
+    padding-left: 7px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
     .options-button:not(.send-button):hover, #reply-options div:last-child .reply-options-icon:first-child, #message-options > div:nth-of-type(2) .message-options-icon:first-child, .message-options-icon:hover {
@@ -439,41 +444,41 @@
     }
 
 .plus-icon {
-    border-radius: 5px;
-    bottom: 5px;
     box-sizing: border-box;
-    float: right;
-    height: 30px;
-    padding-left: 8px;
-    padding-top: 5px;
     position: relative;
+    bottom: 5px;
     width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 8px;
+    float: right;
+    border-radius: 5px;
 }
 
 .replies {
-    align-items: center;
     display: flex;
+    align-items: center;
+    width: 90%;
     height: 35px;
     padding-left: 1px;
-    width: 90%;
 }
 
     .replies b {
+        margin: 5px;
         color: #4682B4;
         font-size: 14px;
-        margin: 5px;
     }
 
     .replies i {
-        margin-left: auto;
         margin-right: 10px;
+        margin-left: auto;
     }
 
     .replies img {
-        border-radius: 3px;
+        width: 25px;
         height: 25px;
         margin: 2px;
-        width: 25px;
+        border-radius: 3px;
     }
 
     .replies span {
@@ -482,10 +487,10 @@
     }
 
     .replies:hover {
-        background-color: #FFF;
+        box-sizing: border-box;
         border: 1px solid lightgray;
         border-radius: 5px;
-        box-sizing: border-box;
+        background-color: #FFF;
         cursor: pointer;
     }
 
@@ -495,9 +500,9 @@
 
 .reply-message {
     display: flex;
-    line-height: 1.4;
-    padding: 10px 20px;
     position: relative;
+    padding: 10px 20px;
+    line-height: 1.4;
 }
 
     .reply-message b, .reply-message span {
@@ -518,14 +523,14 @@
     }
 
     .reply-message:hover .actions, .reply-message:hover .actions-top, .direct-messages-menu-item:hover .hidden, .message:hover .actions, .replies:hover .hidden {
-        visibility: visible;
         display: initial;
+        visibility: visible;
     }
 
 .send-button {
-    background-color: #006400;
     margin-right: 4px;
     padding-left: 10px;
+    background-color: #006400;
 }
 
 .small-gray-text {
@@ -538,13 +543,13 @@
 }
 
 .title-bar-item-small {
-    border-radius: 5px;
     box-sizing: border-box;
-    cursor: pointer;
-    height: 30px;
-    padding-left: 6px;
-    padding-top: 5px;
     width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 6px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .title-bar-item:hover, .plus-icon:hover {
@@ -552,8 +557,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -569,14 +574,14 @@ i {
 }
 
 textarea {
-    border: initial;
     box-sizing: border-box;
+    width: 100%;
+    height: 45%;
+    padding: 10px;
+    overflow: hidden;
+    border: initial;
+    outline: none;
     font-family: inherit;
     font-size: 16px;
-    height: 45%;
-    outline: none;
-    overflow: hidden;
-    padding: 10px;
     resize: initial;
-    width: 100%;
 }
